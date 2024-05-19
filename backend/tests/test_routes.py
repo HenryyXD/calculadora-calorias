@@ -1,7 +1,7 @@
 import unittest
 import json
 from http import HTTPStatus
-from app import create_app
+from ..app import create_app
 from models import Goal, Gender, PhysicalActivity
 
 
