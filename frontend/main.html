@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="icon" type="image/x-icon" sizes="32x32" href="./assets/icone-fitcal.png">
+    <title>FitCal</title>
+</head>
+<body>
+    <div class="maindiv">
+        <div class="container">
+            <h1>FitCal</h1>
+            <form>
+                <p><label>Altura em cm: </label><input type="text" id="altura"/></p>
+                <p><label>Peso em kg: </label><input type="text" id="peso"/></p>
+                <button>Calcular</button>
+                <div class="resultado-box">
+                    <h2>Resultado: </h2>
+                    <div id="resultados"></div>
+                </div>
+
+                <div id="peso-guia">
+                    <h4>Guia de Peso</h4>
+                    <p>Sob o peso = Menos de 18.6</p>
+                    <p>Peso Normal = Entre 18.6 e 24.9</p>
+                    <p>Sobrepeso = Maior que 24.9</p>
+                </div>
+            </form>
+            <a href="login.html">Voltar</a>
+        </div>
+    </div>
+</body>
+</html>

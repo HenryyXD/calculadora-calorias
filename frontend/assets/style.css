@@ -1,0 +1,101 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.maindiv {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(./banner.png);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 90%;
+    max-width: 400px;
+    height: 600px;
+    backdrop-filter: blur(10px);
+    background: #1B201F;
+    padding: 1rem;
+    border-radius: 12px;
+    border: 1px solid #8C52FF;
+    opacity: 0.7;
+}
+
+/* 
+PÁGINA DE LOGIN */
+
+.logo {
+    width: 80px;
+    margin-top: 15px;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    font-size: 40px;
+}
+
+p {
+    color: white;
+    text-align: center;
+    font-size: 15px;
+    margin-top: -20px;
+}
+
+.text {
+    text-align: center;
+    margin-bottom: 40px
+}
+
+.button-link {
+    display: block;
+    padding: 10px 20px;
+    background-color: white;
+    color: #1B201F;
+    text-decoration: none;
+    margin: 20px auto;
+    font-weight: bold;
+    border-radius: 5px;
+    text-align: center;
+    width: 70%;
+}
+
+.button-link:hover {
+    background-color: #8C52FF;
+    color: white;
+}
+
+.links {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.links a {
+    display: block;
+    margin-bottom: 10px;
+    color: white;
+    font-size: 12px;
+}
+
+.login-container input[type="text"], 
+.login-container input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px auto;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+
+/* 
+Cores
+#1B201F - preto
+#8C52FF - roxo
+#65DC59 - verde
+#A6A6A6 - cinza */
