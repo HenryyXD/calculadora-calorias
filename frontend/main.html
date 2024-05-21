@@ -10,24 +10,58 @@
 <body>
     <div class="maindiv">
         <div class="container">
-            <h1>FitCal</h1>
-            <form>
-                <p><label>Altura em cm: </label><input type="text" id="altura"/></p>
-                <p><label>Peso em kg: </label><input type="text" id="peso"/></p>
-                <button>Calcular</button>
-                <div class="resultado-box">
-                    <h2>Resultado: </h2>
-                    <div id="resultados"></div>
+            <a href="./login.html" class="back-arrow"><img src="./assets/seta.png" alt="Voltar"></a>
+            <img class="logo-main" src="./assets/icone-fitcal.png">
+            <h1 class="h1-main">FitCal</h1>
+            <form action="results.html" method="POST">
+                <div class="form-section">
+                    <p>Objetivo:</p>
+                    <input type="radio" id="emagrecer" name="objetivo" value="emagrecer">
+                    <label for="emagrecer">Emagrecer</label>
+                    <input type="radio" id="manter" name="objetivo" value="manter">
+                    <label for="manter">Manter</label>
+                    <input type="radio" id="engordar" name="objetivo" value="engordar">
+                    <label for="engordar">Engordar</label>
                 </div>
-
-                <div id="peso-guia">
-                    <h4>Guia de Peso</h4>
-                    <p>Sob o peso = Menos de 18.6</p>
-                    <p>Peso Normal = Entre 18.6 e 24.9</p>
-                    <p>Sobrepeso = Maior que 24.9</p>
+                
+                <div class="form-section">
+                    <p>Sexo:</p>
+                    <input type="radio" id="feminino" name="sexo" value="feminino">
+                    <label for="feminino">Feminino</label>
+                    <input type="radio" id="masculino" name="sexo" value="masculino">
+                    <label for="masculino">Masculino</label>
                 </div>
+        
+                <div class="form-section flex-container">
+                    <div class="flex-item">
+                        <p>Idade:</p>
+                        <input type="number" id="idade" name="idade" min="0" max="120">
+                    </div>
+                    <div class="flex-item">
+                        <p>Peso (KG):</p>
+                        <input type="number" id="peso" name="peso" step="0.01" min="0">
+                    </div>
+                </div>
+        
+                <div class="form-section">
+                    <p>Altura (CM):</p>
+                    <input type="number" id="altura" name="altura" step="0.01" min="0">
+                </div>
+        
+                <div class="form-section">
+                    <p>Exercícios físicos:</p>
+                    <input type="radio" id="sedentario" name="exercicios" value="sedentario">
+                    <label for="sedentario">Sedentário</label>
+                    <input type="radio" id="moderado" name="exercicios" value="moderado">
+                    <label for="moderado">Moderado</label>
+                    <input type="radio" id="ativo" name="exercicios" value="ativo">
+                    <label for="ativo">Ativo</label>
+                </div>
+                <a href="./results.html">
+                    <button type="button">Cadastrar</button>
+                </a>
+                </a>
             </form>
-            <a href="login.html">Voltar</a>
         </div>
     </div>
 </body>
