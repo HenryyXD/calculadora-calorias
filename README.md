@@ -21,5 +21,5 @@ FitCal é uma aplicação web que permite aos usuários calcular suas necessidad
 - Python
 - ...
 
-## Dessenvolvedores
-Alunos
+## Desenvolvedores
+(Nomes)
