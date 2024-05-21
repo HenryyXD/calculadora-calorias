@@ -1,7 +1,5 @@
 # FitCal - Sistema de Cálculo de Gasto Calórico Diário
 
-![FitCal Logo](./assets/icone-fitcal.png)
-
 ## Descrição
 FitCal é uma aplicação web que permite aos usuários calcular suas necessidades diárias de calorias com base em seu objetivo de saúde e estilo de vida.
 
@@ -20,8 +18,8 @@ FitCal é uma aplicação web que permite aos usuários calcular suas necessidad
 ## Tecnologias Utilizadas
 - HTML
 - CSS
-- JavaScript
 - Python
+- ...
 
 ## Dessenvolvedores
 Alunos
