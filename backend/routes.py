@@ -17,6 +17,7 @@ def calculate():
         #         "wasted_daily": wasted_daily,
         #         "to_consume_daily": to_consume_daily
         #     }), HTTPStatus.OK
+        return jsonify({}), HTTPStatus.OK
     except ValueError as e:
         return jsonify({'Invalid data': str(e)}), HTTPStatus.BAD_REQUEST
 
