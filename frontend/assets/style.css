@@ -203,7 +203,7 @@ a {
 }
 
 a:hover {
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 .flex-container {
@@ -242,12 +242,38 @@ a:hover {
 
     .flex-container {
         flex-direction: column;
-    }
+    } 
 
     .flex-item {
         margin-right: 0;
         margin-bottom: 10px;
     }
+}
+
+/* TELA DE RESULTADO */
+
+.conteudo {
+    text-align: center;
+    margin-top: 30%;
+}
+
+.titulo-resultado {
+    color: white;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
+}
+
+.result-box {
+    padding: 10px;
+    text-align: center;
+    font-size: 1.5em;
+    color: white;
+    width: 50%;
+    font-weight: bold;
+    margin-left: 90px;
+    background-color: #8C52FF;
+    border-radius: 15px;
 }
 
 /* 
