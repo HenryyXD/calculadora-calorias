@@ -30,14 +30,14 @@ def calculate():
             # weightInKg = weightInKg, 
             # heightInCm = heightInCm,
             # physicalActivity = physicalActivity)
-        wasted_daily, to_consume_daily = calculate_calories(person)
+        # wasted_daily, to_consume_daily = calculate_calories(person)
         # return jsonify(
         #     {
         #         "wasted_daily": wasted_daily,
         #         "to_consume_daily": to_consume_daily
         #     }), HTTPStatus.OK
         # return jsonify({}), HTTPStatus.OK 
-        return render_template ('results.html', wasted_daily=wasted_daily, to_consume_daily=to_consume_daily)
+        return render_template ('results.html', wasted_daily=200, to_consume_daily=100)
     except ValueError as e:
         # return jsonify({'Invalid data': str(e)}), HTTPStatus.BAD_REQUEST
         return render_template ('error.html', mensagem=str(e))
