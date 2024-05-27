@@ -13,7 +13,7 @@
             <a href="./index.html" class="back-arrow"><img src="./assets/seta.png" alt="Voltar"></a>
             <img class="logo-main" src="./assets/icone-fitcal.png">
             <h1 class="h1-main">FitCal</h1>
-            <form action="results.html" method="POST">
+            <form action="{{ url_for('api.calculate')}}" method="POST">
                 <div class="form-section">
                     <p>Objetivo:</p>
                     <input type="radio" id="emagrecer" name="objetivo" value="emagrecer">
@@ -57,10 +57,7 @@
                     <input type="radio" id="ativo" name="exercicios" value="ativo">
                     <label for="ativo">Ativo</label>
                 </div>
-                <a href="./results.html">
-                    <button type="button">Cadastrar</button>
-                </a>
-                </a>
+                    <button type="submit">Calcular</button>
             </form>
         </div>
     </div>

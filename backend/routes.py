@@ -1,5 +1,8 @@
-from flask import Blueprint, request, jsonify
+from flask import Blueprint, render_template, request, jsonify
 from http import HTTPStatus
+
+from models import Person
+from services import calculate_calories
 
 api = Blueprint('api', __name__)
 
@@ -7,19 +10,37 @@ api = Blueprint('api', __name__)
 @api.route('/calculate', methods=['POST'])
 def calculate():
     try:
-        person = request.get_json()
+        person_data = request.form.to_dict()
+
+        goal = person_data.get('objetivo')
+        gender = person_data.get('sexo')
+        age = person_data.get('idade')
+        weightInKg = person_data.get('peso')
+        heightInCm = person_data.get('altura')
+        physicalActivity = person_data.get('exercicios')
+
+
         # TODO: incluir variaveis restantes e descomentar
-        age = validate_person(person)
-        # person = Person(goal, name, age, weight, height)
-        # wasted_daily, to_consume_daily = calculate_calories(person)
+        # age = validate_person(person)
+        # person = Person(goal, name, age, weight, height) 
+        # person = Person(
+            # goal = goal,
+            # gender = gender, 
+            # age = age, 
+            # weightInKg = weightInKg, 
+            # heightInCm = heightInCm,
+            # physicalActivity = physicalActivity)
+        wasted_daily, to_consume_daily = calculate_calories(person)
         # return jsonify(
         #     {
         #         "wasted_daily": wasted_daily,
         #         "to_consume_daily": to_consume_daily
         #     }), HTTPStatus.OK
-        return jsonify({}), HTTPStatus.OK
+        # return jsonify({}), HTTPStatus.OK 
+        return render_template ('results.html', wasted_daily=wasted_daily, to_consume_daily=to_consume_daily)
     except ValueError as e:
-        return jsonify({'Invalid data': str(e)}), HTTPStatus.BAD_REQUEST
+        # return jsonify({'Invalid data': str(e)}), HTTPStatus.BAD_REQUEST
+        return render_template ('error.html', mensagem=str(e))
 
 
 def validate_person(person):
