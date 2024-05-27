@@ -10,7 +10,6 @@
 <body>
     <div class="maindiv">
         <div class="container">
-            <a href="{{ url_for('index') }}" class="back-arrow"><img src="{{ url_for('static', filename='assets/seta.png') }}" alt="Voltar"></a>
             <img class="logo-main" src="{{ url_for('static', filename='assets/icone-fitcal.png') }}">
             <h1 class="h1-main">FitCal</h1>
             <form action="{{ url_for('api.calculate')}}" method="POST">
