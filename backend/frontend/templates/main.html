@@ -3,58 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/style.css">
-    <link rel="icon" type="image/x-icon" sizes="32x32" href="./assets/icone-fitcal.png">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/style.css') }}">
+    <link rel="icon" type="image/x-icon" sizes="32x32" href="{{ url_for('static', filename='assets/icone-fitcal.png') }}">
     <title>FitCal</title>
 </head>
 <body>
     <div class="maindiv">
         <div class="container">
-            <a href="./index.html" class="back-arrow"><img src="./assets/seta.png" alt="Voltar"></a>
-            <img class="logo-main" src="./assets/icone-fitcal.png">
+            <a href="{{ url_for('index') }}" class="back-arrow"><img src="{{ url_for('static', filename='assets/seta.png') }}" alt="Voltar"></a>
+            <img class="logo-main" src="{{ url_for('static', filename='assets/icone-fitcal.png') }}">
             <h1 class="h1-main">FitCal</h1>
             <form action="{{ url_for('api.calculate')}}" method="POST">
                 <div class="form-section">
                     <p>Objetivo:</p>
-                    <input type="radio" id="emagrecer" name="objetivo" value="emagrecer">
+                    <input type="radio" id="emagrecer" name="objetivo" value="LOSE_WEIGHT" required>
                     <label for="emagrecer">Emagrecer</label>
-                    <input type="radio" id="manter" name="objetivo" value="manter">
+                    <input type="radio" id="manter" name="objetivo" value="MAINTAIN_WEIGHT" required>
                     <label for="manter">Manter</label>
-                    <input type="radio" id="engordar" name="objetivo" value="engordar">
+                    <input type="radio" id="engordar" name="objetivo" value="GAIN_WEIGHT" required>
                     <label for="engordar">Engordar</label>
                 </div>
                 
                 <div class="form-section">
                     <p>Sexo:</p>
-                    <input type="radio" id="feminino" name="sexo" value="feminino">
+                    <input type="radio" id="feminino" name="sexo" value="FEMALE" required>
                     <label for="feminino">Feminino</label>
-                    <input type="radio" id="masculino" name="sexo" value="masculino">
+                    <input type="radio" id="masculino" name="sexo" value="MALE" required>
                     <label for="masculino">Masculino</label>
                 </div>
         
                 <div class="form-section flex-container">
                     <div class="flex-item">
                         <p>Idade:</p>
-                        <input type="number" id="idade" name="idade" min="0" max="120">
+                        <input type="number" id="idade" name="idade" min="0" max="120" required>
                     </div>
                     <div class="flex-item">
                         <p>Peso (KG):</p>
-                        <input type="number" id="peso" name="peso" step="0.01" min="0">
+                        <input type="number" id="peso" name="peso" step="0.01" min="0" required>
                     </div>
                 </div>
         
                 <div class="form-section">
                     <p>Altura (CM):</p>
-                    <input type="number" id="altura" name="altura" step="0.01" min="0">
+                    <input type="number" id="altura" name="altura" step="0.01" min="0" required>
                 </div>
         
                 <div class="form-section">
                     <p>Exercícios físicos:</p>
-                    <input type="radio" id="sedentario" name="exercicios" value="sedentario">
+                    <input type="radio" id="sedentario" name="exercicios" value="SEDENTARY" required>
                     <label for="sedentario">Sedentário</label>
-                    <input type="radio" id="moderado" name="exercicios" value="moderado">
+                    <input type="radio" id="moderado" name="exercicios" value="MODERATE" readonly>
                     <label for="moderado">Moderado</label>
-                    <input type="radio" id="ativo" name="exercicios" value="ativo">
+                    <input type="radio" id="ativo" name="exercicios" value="ACTIVE" required>
                     <label for="ativo">Ativo</label>
                 </div>
                     <button type="submit">Calcular</button>

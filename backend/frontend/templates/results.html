@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/style.css') }}">
+    <link rel="icon" type="image/x-icon" sizes="32x32" href="{{ url_for('static', filename='assets/icone-fitcal.png') }}">
+    <title>FitCal</title>        
+</head>
+<body>
+    <div class="maindiv">
+        <div class="container">
+            <a href="{{ url_for('index') }}" class="back-arrow"><img src="{{ url_for('static', filename='assets/seta.png') }}" alt="Voltar"></a>
+            <img class="logo-main" src="{{ url_for('static', filename='assets/icone-fitcal.png') }}">
+            <h1 class="h1-main">FitCal</h1>
+            <div class="conteudo">
+                <h3 class="titulo-resultado">Seu gasto calórico diário:</h3>
+                <div class="result-box" id="gasto-calorico">{{ wasted_daily | round(2) }} kcal</div>
+                <h3 class="titulo-resultado">Calorias ideais a serem consumidas diariamente:</h3>
+                <div class="result-box" id="calorias-ideais">{{ to_consume_daily | round(2)  }} kcal</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
