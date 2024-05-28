@@ -23,15 +23,18 @@ class TestRoutes(unittest.TestCase):
 
         response = self.client.post('/calculate', data=json.dumps(person), content_type='application/json')
         self.assertEqual(response.status_code, HTTPStatus.OK)
+        self.assertIn('wasted_daily', response.get_data(as_text=True))
+        self.assertIn('to_consume_daily', response.get_data(as_text=True))
+
 
     def test_calculate_should_return_bad_request_if_age_is_zero_or_less(self):
         person = {
           "goal": Goal.GAIN_WEIGHT.value,
-          "gender": Gender.FEMALE.value,
-          "age": 0,
-          "weightInKg": 100,
-          "heightInCm": 161,
-          "physicalActivity": PhysicalActivity.SEDENTARY.value
+            "gender": Gender.FEMALE.value,
+            "age": 0,
+            "weightInKg": 100,
+            "heightInCm": 161,
+            "physicalActivity": PhysicalActivity.SEDENTARY.value
         }
 
         response = self.client.post('/calculate', data=json.dumps(person), content_type='application/json')
