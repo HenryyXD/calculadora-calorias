@@ -13,7 +13,8 @@ FitCal é uma aplicação web que permite aos usuários calcular suas necessidad
 
 ## Como Usar
 1. Faça o clone deste repositório.
-2. (Ainda a inserir)
+2. Instalar as dependencias com: pip install -r backend/requiriments.txt
+3. Rodar com Python backend/app.py
 3. Preencha as informações solicitadas (objetivo, sexo, idade, peso, altura e nível de atividade física).
 4. Clique em "calcular" para ver os resultados.
 
