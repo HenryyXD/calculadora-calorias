@@ -1,4 +1,4 @@
-![banner](https://github.com/HenryyXD/calculadora-calorias/assets/160256475/9c399d4e-aca8-493f-a1be-91922f346733)
+![banner](https://github.com/HenryyXD/calculadora-calorias/raw/1da72ecc6c7b3f5478d37b909cf9488b74996c3d/backend/frontend/static/assets/fundogit.png)
 
 <h1>FitCal - Sistema de Cálculo de Gasto Calórico Diário</h1>
 
